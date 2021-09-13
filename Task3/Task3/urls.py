@@ -1,4 +1,4 @@
-"""Task2Bonusfinal URL Configuration
+"""Task3 URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
@@ -18,7 +18,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.homepage),
-    path('pokemons/', views.pokemons),
-    path('berries/', views.berries),
+    path('admin/', admin.site.urls),
+    path('home/', views.home, name='home'),
+    path('poketypes/', views.types, name='poketypes')
 ]

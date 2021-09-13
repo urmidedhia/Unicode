@@ -24,3 +24,20 @@ def pokemons(request):
 
     return HttpResponse(pokemons)
 
+def berries(request):
+    response = requests.get("https://pokeapi.co/api/v2/berry?offset=0&limit=64")
+    display = response.json()
+    results = display["results"]
+    berries = ""
+
+    for i in results:
+        berries = berries + '<li>' + i["name"]
+
+    return HttpResponse(berries)
+
+def homepage(request):
+    display = '''Hello, welcome to the world of pokemons...<ol>
+<li>type /pokemons in the url to get a list of all pokemons
+<li>type /berries in the url to get a list of all berries
+    </ol>'''
+    return HttpResponse(display)

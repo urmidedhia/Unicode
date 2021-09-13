@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "2FILES.C": "cpp",
+        "FOPEN.C": "cpp",
+        "FILECOPY.C": "cpp",
+        "FILESTRU.C": "cpp",
+        "FILESEEK.C": "cpp",
+        "FILEFOMT.C": "cpp"
+    }
+}
